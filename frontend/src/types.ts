@@ -7,4 +7,11 @@ export type Recipe = {
 
 export type Props = {
     recipe: Recipe;
+    onClick: () => void;
+};
+
+export type RecipeSummary = {
+    id: number;
+    title: string;
+    summary: string;
 };
