@@ -24,6 +24,12 @@ export const searchRecipes = async (searchTerm: string, page: number) => {
 
         return resultsJson;
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
+};
+
+
+export const getRecipeSummary = async (recipeId: string) => {
+    const url = new URL(`https://api.spoonacular.com/recipes/${recipeId}/summary`);
+
 };
