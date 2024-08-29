@@ -2,6 +2,80 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  padding: 1.5em 1.5em;
+  height: 100vh;
+
+}
+
+@media (min-width: 768px) {
+  body {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+}
+
+.tab-active {
+  border-bottom: 4px rgb(202, 129, 2) solid;
+  padding-bottom: 0.5em;
+}
+
+form {
+  display: flex;
+  background-color: white;
+  align-items: center;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2em;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+  padding: 1em;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer;
+  gap: 1.5em;
+}
+
+.recipe-card h3 {
+  font-size: 1.5em;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.view-more-button {
+  font-size: 1.5em;
+  padding: 1em;
+  font-weight: bold;
+  margin: auto;
+}
+
+input {
+  padding: 0.5em;
+  font-size: 2em;
+  flex: 1;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
