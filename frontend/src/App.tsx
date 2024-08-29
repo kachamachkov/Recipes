@@ -84,14 +84,21 @@ const App = () => {
             <button type='submit'>Submit</button>
           </form>
 
-          {recipes.map((recipe) => (
-            <RecipeCard
-              key={recipe.id}
-              recipe={recipe}
-              onClick={() => setSelectedRecipe(recipe)}
-              onFavoriteButtonClick={addFavoriteRecipe}
-            />
-          ))}
+          {recipes.map((recipe) => {
+            const isFavorite = favoriteRecipes.some(
+              (favRecipe) => recipe.id === favRecipe.id
+            );
+
+            return (
+              <RecipeCard
+                key={recipe.id}
+                recipe={recipe}
+                onClick={() => setSelectedRecipe(recipe)}
+                onFavoriteButtonClick={addFavoriteRecipe}
+                isFavorite={isFavorite}
+              />
+            );
+          })}
 
           <button
             className='view-more-button'
@@ -107,6 +114,7 @@ const App = () => {
               recipe={recipe}
               onClick={() => setSelectedRecipe(recipe)}
               onFavoriteButtonClick={() => undefined}
+              isFavorite={true}
             />
           ))}
 

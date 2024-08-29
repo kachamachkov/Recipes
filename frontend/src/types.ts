@@ -9,6 +9,7 @@ export type Props = {
     recipe: Recipe;
     onClick: () => void;
     onFavoriteButtonClick: (recipe: Recipe) => void;
+    isFavorite: boolean;
 };
 
 export type RecipeSummary = {
